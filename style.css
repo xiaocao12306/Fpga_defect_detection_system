@@ -1,0 +1,27 @@
+#myCanvas {
+  position:relative;
+}
+
+#name {
+  position:absolute;
+  top:10px;
+  left:10px;
+}
+.container {
+  opacity:0;
+  position:absolute;
+  list-style:none;
+  background:rgba(0,0,0,.6);
+  color:white;
+  transition:opacity .2s;
+  padding:10px;
+  border-radius:4px;
+}
+
+.open{
+  opacity:1;
+  transition:opacity .2s;
+}
+.container li {
+  text-align:left;
+}
