@@ -1,7 +1,39 @@
-#myCanvas {
-  position:relative;
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  height:100vh;
+  /* background: */
+  color: #000;
 }
 
+#myCanvas {
+  position:relative;
+ 
+  /* width: 60%;
+  height:70vh */
+}
+header {
+  background:#106898;;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.canvas-conainer{
+  border: 10px solid #ffee6f;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  border-image: linear-gradient(to right, #8f41e9, #578aef) 1;
+  margin-right:20px;
+}
+.canvas-conainer img{
+  position:absolute;
+}
+ul{
+  list-style: none;
+}
 #name {
   position:absolute;
   top:10px;
@@ -16,12 +48,35 @@
   transition:opacity .2s;
   padding:10px;
   border-radius:4px;
+  z-index: 1000;
+  pointer-events: none;
 }
 
 .open{
   opacity:1;
-  transition:opacity .2s;
+  transition:all .16s;
 }
 .container li {
   text-align:left;
+}
+
+.body {
+  display:flex;
+  padding: 20px;
+}
+.list-img{
+  width:80px;
+  height:80px;
+  border-radius:4px;
+  margin-right: 20px;
+}
+
+th,td{
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+.list-item{
+  display:flex;
+  padding: 10px;
 }
