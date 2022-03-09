@@ -1,0 +1,2 @@
+# Fpga_defect_detection_system
+本项目是FPGA AI图片缺陷检测算法可视化平台
