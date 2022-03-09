@@ -54,7 +54,7 @@ ul{
 
 .open{
   opacity:1;
-  transition:all .16s;
+  transition:opacity .16s;
 }
 .container li {
   text-align:left;
