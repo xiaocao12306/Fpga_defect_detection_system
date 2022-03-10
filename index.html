@@ -12,12 +12,18 @@
     <h2>FPGA缺陷检测测试系统</h2>
   </header>
   <ul class="container"></ul>
+  
   <div class="body">
     <div class="canvas-conainer">
-      <img src="./GitHub.jpg" width="800" id="example-img" alt="" />
-      <canvas id="myCanvas" width="800" height="600"></canvas>
+      <form id="upload_form" action ="http://172.18.12.13:8000/predict/" method="POST" enctype="multipart/form-data">
+        铝片照片：<input type="file" name="image" />
+        模型名称：<input type="text" name="model_name" />
+        <input type="submit" />
+      </form>
+      <img src="#" width="640" id="example-img" alt="" />
+      <canvas id="myCanvas" width="640" height="480"></canvas>
     </div>
-    <ul class="list">
+    <!-- <ul class="list">
       <li class="list-item">
         <img src="./GitHub.jpg" id="myImage" alt=""class="list-img" />
         <table>
@@ -39,54 +45,14 @@
           </tr>
         </table>
       </li>
-      <li class="list-item">
-        <img src="./GitHub.jpg" alt=""class="list-img" id="durimg" />
-        <table>
-          <tr>
-            <th>score</th>
-            <th>name</th>
-            <th>xmin</th>
-            <th>xmax</th>
-            <th>ymin</th>
-            <th>ymax</th>
-          </tr>
-          <tr>
-            <td>0.99</td>
-            <td>zang_wu</td>
-            <td>20</td>
-            <td>210</td>
-            <td>20</td>
-            <td>220</td>
-          </tr>
-        </table>
-      </li>
-      <li class="list-item">
-        <img src="./GitHub.jpg" alt=""class="list-img" />
-        <table>
-          <tr>
-            <th>score</th>
-            <th>name</th>
-            <th>xmin</th>
-            <th>xmax</th>
-            <th>ymin</th>
-            <th>ymax</th>
-          </tr>
-          <tr>
-            <td>0.99</td>
-            <td>zang_wu</td>
-            <td>20</td>
-            <td>210</td>
-            <td>20</td>
-            <td>220</td>
-          </tr>
-        </table>
-      </li>
-    </ul>
+    </ul> -->
   </div>
   <!-- <canvas id="canvasImage" width="200" height="200"></canvas> -->
   <footer>
 
   </footer>
+  <!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> -->
+  <script src="./control.js"></script>
   <script src="./index.js"></script>
 </body>
 </html>
