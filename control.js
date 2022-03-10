@@ -118,3 +118,13 @@ function flag (x, y, arr) {
   }
   ishover = false
 }
+
+// function loading () {
+//   let timer = null;
+//   timer = setInterval(() => {
+//     document.getElementById('example-img').style.opacity += 0.1
+//     if (document.getElementById('example-img').style.opacity >= 1) {
+//       clearInterval(timer)
+//     }
+//   }, 100);
+// }

@@ -30,6 +30,7 @@ header {
 }
 .canvas-conainer img{
   position:absolute;
+  opacity: 1;
 }
 ul{
   list-style: none;
@@ -70,7 +71,10 @@ ul{
   border-radius:4px;
   margin-right: 20px;
 }
-
+.list {
+  height:70vh;
+  overflow: auto;
+}
 th,td{
   font-size: 18px;
   padding: 0 10px;
@@ -79,4 +83,14 @@ th,td{
 .list-item{
   display:flex;
   padding: 10px;
+}
+
+.loading {
+
+  animation: loading 3s ease-in;
+}
+
+@keyframes loading {
+  from {opacity: 0;}
+  to {opacity: 1}
 }
