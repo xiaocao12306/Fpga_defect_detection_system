@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./upload.css">
   <title>FPGA缺陷检测测试系统</title>
 </head>
 <body>
@@ -12,14 +13,24 @@
     <h2>FPGA缺陷检测测试系统</h2>
   </header>
   <ul class="container"></ul>
-  
+  <div class="file-upload">
+    <form id="upload_form" action ="http://172.18.12.13:8000/predict/" method="POST" enctype="multipart/form-data">
+      <!-- <input type="file" name="image" id="image" /> -->
+          <div class="file-select">
+            <div class="file-select-button" id="fileName">Choose File</div>
+            <div class="file-select-name" id="noFile">No file chosen...</div> 
+            <input type="file" name="image" id="chooseFile">
+          </div>
+      <input type="submit" class="btn" value="开始预测" /> 
+    </form>
+  </div>
   <div class="body">
     <div class="canvas-conainer">
-      <form id="upload_form" action ="http://172.18.12.13:8000/predict/" method="POST" enctype="multipart/form-data">
-        铝片照片：<input type="file" name="image" />
-        模型名称：<input type="text" name="model_name" />
-        <input type="submit" />
-      </form>
+      <div class="loading" style="display:none">
+        <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+      </div>
       <img src="#" width="640" id="example-img" alt="" />
       <canvas id="myCanvas" width="640" height="480"></canvas>
     </div>
@@ -47,12 +58,13 @@
       </li>
     </ul>
   </div>
-  <!-- <canvas id="canvasImage" width="200" height="200"></canvas> -->
   <footer>
 
   </footer>
-  <!-- <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script> -->
-  <script src="./control.js"></script>
-  <script src="./index.js"></script>
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script src="./js/upload.js"></script>
+  <script src="./js/popup.js"></script>
+  <script src="./js/control.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>
