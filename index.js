@@ -2,7 +2,7 @@
 
 const img = document.getElementById('example-img');
 const from = document.getElementById('upload_form');
-const url = 'http://172.18.12.13:8000/predict/'
+const url = 'https://172.18.12.13:8000/predict/'
 from.onsubmit = e => {
   let formData = new FormData(from);
   const img = e.target[0].files[0];
