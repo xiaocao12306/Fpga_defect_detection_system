@@ -9,6 +9,7 @@ body {
 }
 
 #myCanvas {
+  z-index: 1000;
   position:relative;
  
   /* width: 60%;
@@ -114,7 +115,7 @@ form {
 }
 
 .loading {
-  z-index: 1000;
+  z-index: 100;
   position:absolute;
   display: flex;
   top: -1px;
