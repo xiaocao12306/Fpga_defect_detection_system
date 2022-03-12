@@ -24,6 +24,8 @@
 /****** CODE ******/
 
 .file-upload {
+  display:flex;
+  justify-content: center;
   text-align: center;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;

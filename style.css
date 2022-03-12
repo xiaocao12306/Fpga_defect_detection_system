@@ -4,8 +4,10 @@
 }
 body {
   height:100vh;
-  /* background: */
+  background:#faf9f8;
   color: #000;
+  padding: 20px;
+  box-sizing:border-box;
 }
 
 #myCanvas {
@@ -22,6 +24,7 @@ header {
   margin-bottom: 20px;
 }
 .canvas-conainer{
+  float:left;
   display:flex;
   position: relative;
   justify-content: center;
@@ -32,7 +35,7 @@ header {
   /* border-radius: 15px; */
   overflow: hidden;
   position: relative;
-  border-image: linear-gradient(to right, #8f41e9, #578aef) 1;
+  /* border-image: linear-gradient(to right, #8f41e9, #578aef) 1; */
   margin-right:20px;
 }
 .canvas-conainer img{
@@ -48,6 +51,7 @@ ul{
   left:10px;
 }
 .container {
+  z-index: 10000;
   opacity:0;
   position:absolute;
   list-style:none;
@@ -56,7 +60,6 @@ ul{
   transition:opacity .2s;
   padding:10px;
   border-radius:4px;
-  z-index: 1000;
   pointer-events: none;
 }
 
@@ -75,39 +78,13 @@ ul{
 }
 
 .body {
-  display:flex;
   padding: 20px;
 }
 .list-img{
-  width:80px;
-  height:80px;
+  width:60px;
+  height:60px;
   border-radius:4px;
-  margin-right: 20px;
 }
-.list {
-  height:70vh;
-  overflow: auto;
-}
-th,td{
-  font-size: 18px;
-  padding: 0 10px;
-}
-
-.list-item{
-  display:flex;
-  padding: 10px;
-}
-
-
-/* label[for = 'image'] {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  background-image: url(./assets/icon/upload.svg);
-  background-repeat:no-repeat;
-  background-position: center;
-  cursor: pointer;
-} */
 
 form {
   padding: 0 20px;
@@ -184,4 +161,54 @@ form {
 }
 .load_animation {
   display:none;
+}
+
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  /* height:auto; */
+}
+
+
+#keywords thead {
+  cursor: pointer;
+  background: #34495e;
+  color: #fff;
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+  font-size: 14px;
+}
+#keywords thead tr th span { 
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+  background: #acc8dd;
+}
+
+#keywords thead tr th.headerSortUp span {
+  background-image: url('https://i.imgur.com/SP99ZPJ.png');
+}
+#keywords thead tr th.headerSortDown span {
+  background-image: url('https://i.imgur.com/RkA9MBo.png');
+}
+
+
+#keywords tbody tr { 
+  color: #555;
+  height:auto;
+  height:40px;
+}
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+#keywords tbody tr td.lalign {
+  text-align: left;
 }

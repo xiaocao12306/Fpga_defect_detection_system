@@ -25,7 +25,7 @@ class Popup {
 
   movePopup (x, y) {
     this.ctx.style.top = y + "px";
-    this.ctx.style.left = x + 20 + "px";
+    this.ctx.style.left = x + 80 + "px";
   }
 
   closePopup() {

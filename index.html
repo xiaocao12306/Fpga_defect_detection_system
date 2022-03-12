@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +10,9 @@
   <title>FPGA缺陷检测测试系统</title>
 </head>
 <body>
-  <header>
+  <!-- <header>
     <h2>FPGA缺陷检测测试系统</h2>
-  </header>
+  </header> -->
   <ul class="container"></ul>
   <div class="file-upload">
     <form id="upload_form">
@@ -35,29 +35,19 @@
       <img src="#" width="640" id="example-img" alt="" />
       <canvas id="myCanvas" width="640" height="480"></canvas>
     </div>
-    <ul class="list">
-      <li class="list-item">
-        <img src="./GitHub.jpg" id="myImage" alt=""class="list-img" />
-        <table>
-          <tr>
-            <th>score</th>
-            <th>name</th>
-            <th>xmin</th>
-            <th>xmax</th>
-            <th>ymin</th>
-            <th>ymax</th>
-          </tr>
-          <tr>
-            <td>0.99</td>
-            <td>zang_wu</td>
-            <td>20</td>
-            <td>210</td>
-            <td>20</td>
-            <td>220</td>
-          </tr>
-        </table>
-      </li>
-    </ul>
+    <table id="keywords" cellspacing="0" cellpadding="0">
+      <thead>
+        <tr>
+          <th><span>图片</span></th>
+          <th><span>ID</span></th>
+          <th><span>名称</span></th>
+          <th><span>识别时间</span></th>
+          <th><span>缺陷总数</span></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
   </div>
   <footer>
 
@@ -65,7 +55,7 @@
   <script type="text/javascript" src="./js/jquery.min.js"></script>
   <script src="./js/upload.js"></script>
   <script src="./js/popup.js"></script>
-  <script src="./js/control.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/draw.js"></script>
+  <script  src="./js/index.js"></script>
 </body>
 </html>
