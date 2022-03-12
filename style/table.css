@@ -1,0 +1,41 @@
+
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  /* height:auto; */
+}
+
+#keywords thead {
+  cursor: pointer;
+  background: #34495e;
+  color: #fff;
+}
+
+#keywords thead tr th {
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 42px;
+  font-size: 16px;
+}
+
+#keywords thead tr th span {
+  padding-right: 20px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+#keywords tbody tr {
+  color: #555;
+  height: auto;
+  height: 40px;
+}
+
+#keywords tbody tr td {
+  text-align: center;
+  padding: 15px 10px;
+}
+
+#keywords tbody tr td.lalign {
+  text-align: left;
+}

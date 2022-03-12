@@ -1,60 +1,37 @@
-/****** IGNORE ******/
-/* body {
-  width: 400px;
-  margin: 100px auto;
-  background-color: #f5f5f5;
-} */
-
-.copyright {
-  display: block;
-  margin-top: 100px;
-  text-align: center;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.copyright a {
-  text-decoration: none;
-  color: #EE4E44;
-}
-
-
-/****** CODE ******/
-
 .file-upload {
   display:flex;
   justify-content: center;
   text-align: center;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
+  margin: 20px;
 }
 
 .file-upload .file-select {
-  width:300px;
+  width:400px;
   display: block;
   border: 2px solid #dce4ec;
   color: #34495e;
   cursor: pointer;
-  height: 40px;
+  height: 50px;
   line-height: 40px;
   text-align: left;
   background: #FFFFFF;
   overflow: hidden;
   position: relative;
+  border-radius:4px;
 }
 
 .file-upload .file-select .file-select-button {
   background: #dce4ec;
   padding: 0 10px;
   display: inline-block;
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
 }
 
 .file-upload .file-select .file-select-name {
-  line-height: 40px;
+  line-height: 50px;
   display: inline-block;
   padding: 0 10px;
 }
@@ -143,8 +120,8 @@
   background: #dce4ec;
   color: #34495e;
   display: inline-block;
-  width:120px;
-  height:40px;
+  width:140px;
+  height:50px;
   outline: none;
   border: none;
   border-radius:5px;

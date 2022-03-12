@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./upload.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/upload.css">
+  <link rel="stylesheet" href="./style/table.css">
 
   <title>FPGA缺陷检测测试系统</title>
 </head>
+
 <body>
-  <!-- <header>
-    <h2>FPGA缺陷检测测试系统</h2>
-  </header> -->
   <ul class="container"></ul>
+
+  <!-- 上传图片 START -->
   <div class="file-upload">
     <form id="upload_form">
-      <!-- <input type="file" name="image" id="image" /> -->
-          <div class="file-select">
-            <div class="file-select-button" id="fileName">Choose File</div>
-            <div class="file-select-name" id="noFile">No file chosen...</div> 
-            <input type="file" name="image" id="chooseFile">
-          </div>
-      <input type="submit" class="btn" value="开始预测" /> 
+      <div class="file-select">
+        <div class="file-select-button" id="fileName">Choose File</div>
+        <div class="file-select-name" id="noFile">No file chosen...</div>
+        <input type="file" name="image" id="chooseFile">
+      </div>
+      <input type="submit" class="btn" value="开始预测" />
     </form>
   </div>
+  <!-- END -->
+
   <div class="body">
+    <!-- 预测图片 START -->
     <div class="canvas-conainer">
       <div class="loading">
         <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
@@ -35,6 +39,9 @@
       <img src="#" width="640" id="example-img" alt="" />
       <canvas id="myCanvas" width="640" height="480"></canvas>
     </div>
+    <!-- END -->
+
+    <!-- 历史记录表格 START -->
     <table id="keywords" cellspacing="0" cellpadding="0">
       <thead>
         <tr>
@@ -48,6 +55,7 @@
       <tbody>
       </tbody>
     </table>
+    <!-- END -->
   </div>
   <footer>
 
@@ -56,6 +64,7 @@
   <script src="./js/upload.js"></script>
   <script src="./js/popup.js"></script>
   <script src="./js/draw.js"></script>
-  <script  src="./js/index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
+
 </html>
