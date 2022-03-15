@@ -1,7 +1,7 @@
 const img = document.getElementById('example-img');
 const from = document.getElementById('upload_form');
 const exImg = document.getElementById('example-img');
-const url = 'http://172.18.12.13:8000/predict/'
+const url = 'http://172.16.84.201:8000/'
 
 
 from.onsubmit = e => {
@@ -18,7 +18,7 @@ from.onsubmit = e => {
     mode: 'cors', // no-cors, *cors, same-origin
     body:formData
   }
-  getResult(url, actions)
+  getResult(url + 'predict/', actions)
   
   return false;
 }
@@ -31,7 +31,8 @@ function getResult (url, actions) {
       .then(data => {
         $('.loading').css('opacity', '0')
         $('.btn').val('开始识别')
-        const mark = new Mark('myCanvas', data)
+        console.log(data)
+        const mark = new Mark('myCanvas', data.result[0])
         mark.draw()
       })
       .catch(err => {
@@ -40,7 +41,7 @@ function getResult (url, actions) {
   }
 
 function getHistoryResult (url) {
-  fetch(url + '?size=5')
+  fetch(url +'predict/'+ '?size=5')
     .then((response) => response.json())
     .then(data => {
       const { image_info } = data
@@ -48,7 +49,7 @@ function getHistoryResult (url) {
         const tr = document.createElement('tr')
         const content = `
           <td class="lalign">
-            <img src="http://172.18.12.13:8000${image.image_path}" class="list-img" alt="">
+            <img src="http://172.16.84.201:8000${image.image_path}" class="list-img" alt="">
           </td>
           <td>${image.id}</td>
           <td>${image.image_use_model}</td>

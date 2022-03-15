@@ -10,5 +10,6 @@ $('#chooseFile').bind('change', function () {
     $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
     const imgUrl = URL.createObjectURL(img);
     document.querySelector('#example-img').src = imgUrl
+    document.querySelector('#myCanvas').getContext('2d').clearRect(0, 0, 640,480)
   }
 });
