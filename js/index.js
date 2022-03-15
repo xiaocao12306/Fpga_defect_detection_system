@@ -10,7 +10,7 @@ from.onsubmit = e => {
     alert('请选择预测图片')
     return false; 
   }
-  formData.append('model_name', 'example')
+  // formData.append('model_name', 'example')
   $('.loading').css('opacity', '1');
   $('.btn').val('识别中...')
   const actions = {

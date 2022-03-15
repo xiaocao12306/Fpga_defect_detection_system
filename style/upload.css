@@ -20,6 +20,7 @@
   overflow: hidden;
   position: relative;
   border-radius:4px;
+  margin-right: 10px;
 }
 
 .file-upload .file-select .file-select-button {
@@ -134,4 +135,12 @@
   background: #34495e;
   color: #fff;
   transition: all 0.2s ease-in-out;
+}
+
+#modelName {
+  height:100%;
+  width:100%;
+  border:none;
+  outline:none;
+  margin:0 10px;
 }
